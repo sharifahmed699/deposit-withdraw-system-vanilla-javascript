@@ -1,9 +1,14 @@
 
+function getInputValue(inputId){
+    const inputField=document.getElementById(inputId);
+    const Amount=inputField.value
+     // clear the input value
+     inputField.value = ''
+    return Amount
+}
 // handel deposit button event
 document.getElementById('deposite-button').addEventListener('click', function(){
-    // get deposit amount
-    const depositField=document.getElementById('deposit-input');
-    const depositAmount=depositField.value
+    depositAmount=getInputValue('deposit-input')
     // set deposit amount
     const depositTotal=document.getElementById('deposit-total')
     const previousDepositAmount=depositTotal.innerText
@@ -11,13 +16,10 @@ document.getElementById('deposite-button').addEventListener('click', function(){
     // update the balance amount
     const balanceTotal = document.getElementById('balance-total')
     balanceTotal.innerText=parseFloat(balanceTotal.innerText) + parseFloat(depositAmount)
-    // clear the input value
-    depositField.value = ''
+   
 })
 document.getElementById('withdraw-button').addEventListener('click',function(){
-    // get withdraw amount
-    const withdrawField=document.getElementById('withdraw-input');
-    const withdrawAmount=withdrawField.value
+    withdrawAmount=getInputValue('withdraw-input')
     // set deposit amount
     const withdrawTotal=document.getElementById('withdraw-total')
     const previousWithdrawAmount=withdrawTotal.innerText
