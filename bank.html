@@ -12,44 +12,45 @@
 
 <body>
     <header>
-        <h2 class="text-5xl text-center mt-12">Let's Get Some <span class="font-semibold text-red-600">Mooney !!</span>
+        <h2 class="text-7xl text-center mt-16 mb-12">Let's Get Some <span class="font-semibold text-red-600">Mooney !!!</span>
         </h2>
     </header>
     <main>
         <!-- balance and transaction -->
-        <section class="mt-8">
-            <div class="grid grid-cols-3 gap-4 w-3/4 mx-auto  text-white">
+        <section>
+            <div class="grid grid-cols-3 gap-8 w-3/4 mx-auto  text-white">
                 <div class="bg-blue-400  p-8 rounded-lg">
-                    <h3 class="text-3xl">Deposit</h3>
-                    <h2 class="text-4xl">$<span id="deposit-total">00</span> </h2>
+                    <h3 class="text-6xl">Deposit</h3>
+                    <h2 class="text-7xl">$<span id="deposit-total">00</span> </h2>
                 </div>
                 <div class="bg-pink-400  p-8 rounded-lg">
-                    <h3 class="text-3xl">Withdraw</h3>
-                    <h2 class="text-4xl">$<span id="withdraw-total">00</span></h2>
+                    <h3 class="text-6xl">Withdraw</h3>
+                    <h2 class="text-7xl">$<span id="withdraw-total">00</span></h2>
                 </div>
                 <div class="bg-green-400  p-8 rounded-lg">
-                    <h3 class="text-3xl">Balance</h3>
-                    <h2 class="text-4xl">$<span id="balance-total">500</span></h2>
+                    <h3 class="text-6xl">Balance</h3>
+                    <h2 class="text-7xl">$<span id="balance-total">500</span></h2>
                 </div>
             </div>
         </section>
         <!-- diposit and withdraw -->
-        <section class="mt-4 mb-8">
-            <div class="grid grid-cols-2 gap-4 w-3/4 mx-auto ">
+        <section class="mt-7 mb-16">
+            <div class="grid grid-cols-2 gap-8 w-3/4 mx-auto ">
                <div class="bg-yellow-300 rounded p-4 rounded">
-                    <h3 class="text-2xl mb-2 font-medium">Please Deposit </h3>
+                    <h3 class="text-4xl mb-2 font-medium">Please Deposit </h3>
                     <div class="">
-                        <input id="deposit-input" class="border-2 border-red-300 rounded block px-2 mb-2 w-11/12	" type="text"
+                        <input id="deposit-input" class="border-2 border-red-300 rounded-md block px-2 mb-2 w-4/5 text-2xl	font-light"
+                            type="text"
                             placeholder="$ Amount tour want to Deposit">
-                        <button id="deposite-button" class="bg-red-400	text-white font-medium px-4 py-1 rounded">Deposit</button>
+                        <button id="deposite-button" class="bg-red-400	text-white font-medium px-4 py-2 rounded-md text-2xl">Deposit</button>
                     </div>      
                </div>
                <div class="bg-blue-300 rounded p-4 rounded">
-                <h3 class="text-2xl mb-2 font-medium">Please Withdraw </h3>
+                <h3 class="text-4xl mb-2 font-medium">Please Withdraw </h3>
                 <div class="">
-                    <input id="withdraw-input" class="border-2 border-red-200 rounded block px-2 mb-2 w-11/12	" type="text"
-                        placeholder="$ Amount tour want to Withdraw">
-                    <button id="withdraw-button" class="bg-red-400	text-white font-medium px-4 py-1 rounded">Withdraw</button>
+                    <input id="withdraw-input" class="border-2 border-red-200 rounded-md block px-2 mb-2 w-4/5 text-2xl	font-light"
+                        type="text" placeholder="$ Amount Your want to Withdraw">
+                    <button id="withdraw-button" class="bg-red-400	text-white font-medium px-4 py-2  rounded-md text-2xl">Withdraw</button>
                 </div>      
            </div>
             </div>
