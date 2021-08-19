@@ -13,14 +13,23 @@ function updateAmount(fieldId, amount){
     return total
 
 }
+function updateBalance(amount,isAdd){
+    const balanceTotal = document.getElementById('balance-total')
+    if(isAdd == true){
+        balanceTotal.innerText=parseFloat(balanceTotal.innerText) + parseFloat(amount)
+    }
+    else{
+        balanceTotal.innerText=parseFloat(balanceTotal.innerText) - parseFloat(amount)
+    }
+    
+}
 // handel deposit button event
 document.getElementById('deposite-button').addEventListener('click', function(){
     depositAmount=getInputValue('deposit-input')
 
     depositTotal = updateAmount('deposit-total', depositAmount)
-    // update the balance amount
-    const balanceTotal = document.getElementById('balance-total')
-    balanceTotal.innerText=parseFloat(balanceTotal.innerText) + parseFloat(depositAmount)
+
+    updateBalance(depositAmount, true)
    
 })
 document.getElementById('withdraw-button').addEventListener('click',function(){
@@ -28,10 +37,5 @@ document.getElementById('withdraw-button').addEventListener('click',function(){
     
     withdrawTotal  = updateAmount('withdraw-total', withdrawAmount)
 
-    // update the balance amount
-    const balanceTotal = document.getElementById('balance-total')
-    balanceTotal.innerText=parseFloat(balanceTotal.innerText) - parseFloat(withdrawAmount)
-
-    // clear the input value
-    withdrawField.value = ''
+    updateBalance(withdrawAmount, false)
 })
